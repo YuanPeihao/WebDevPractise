@@ -7,14 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <!-- Bootstrap CSS -->
+    <!-- CSS -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/mystyles.css">
 </head>
 
 <body>
 	<header class="jumbotron">
 		<div class="container">
-			<div class="row">
+			<div class="row row-header">
 				<div class="col-sm-6">
 					<h1>header</h1>
 				</div>
@@ -23,31 +24,53 @@
 	</header>
 
 	<div class="container">
-		<div class="row">
+		<div class="row row-content align-items-center">
 			<div class="col-sm-6">
 				<h2>content 1</h2>
+				<p>text 1</p>
 			</div>
 			<div class="col-sm-6">
 				<h2>content 2</h2>
+				<p>text 2</p>
 			</div>
 		</div>
-		<div class="row">
+		<div class="row row-content align-items-center">
 			<div class="col-sm-4">
 				<h3>content 3</h3>
+				<p>text 3</p>
 			</div>
 			<div class="col-sm-4">
 				<h3>content 4</h3>
+				<p>text 4</p>
 			</div>
 			<div class="col-sm-4">
 				<h3>content 5</h3>
+				<p>text 5</p>
 			</div>
 		</div>
 	</div>
 	
-	<footer>
+	<footer class="footer">
 		<div class="container">
 			<div class="row">
-				<p>footer</p>
+				<div class="col-sm-4">
+					<ul class="list-unstyled">
+						<li><a href="#">f1</a></li>
+					</ul>
+				</div>
+				<div class="col-sm-4 align-self-center">
+					<ul class="list-unstyled">
+						<li><a href="#">f1</a></li>
+					</ul>
+				</div>
+				<div class="col-sm-4">
+					<address>my address</address>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-auto">
+					<p>Copyright</p>
+				</div>
 			</div>
 		</div>
 	</footer>
