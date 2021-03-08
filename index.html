@@ -9,10 +9,28 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
     <link rel="stylesheet" type="text/css" href="css/mystyles.css">
 </head>
 
 <body>
+	<nav class="navbar navbar-dark navbar-expand-sm bg-primary fixed-top">
+        <div class="container">
+        	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">MyPractise</a>
+            <div class="collapse navbar-collapse" id="Navbar">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contactus.html">Contact</a></li>
+                </ul>     
+            </div>     
+        </div>
+    </nav>
 	<header class="jumbotron">
 		<div class="container">
 			<div class="row row-header">
@@ -53,18 +71,29 @@
 	<footer class="footer">
 		<div class="container">
 			<div class="row">
+				<h5>Contact Us</h5>
+			</div>
+			<div class="row">
 				<div class="col-sm-4">
-					<ul class="list-unstyled">
-						<li><a href="#">f1</a></li>
-					</ul>
+					<i class="fa fa-phone fa-lg"></i>: +1 12345678<br>
+                    <i class="fa fa-fax fa-lg"></i>: +1 87654321<br>
+                    <i class="fa fa-envelope fa-lg"></i>: 
+                    <a href="yuanph@yahoo.com">yuanph@yahoo.com</a>
+				</div>
+				<div class="col-sm-4">
+					<address>
+						123 Central Street,<br>
+						Durham, NH, 01234<br>
+					</address>
 				</div>
 				<div class="col-sm-4 align-self-center">
-					<ul class="list-unstyled">
-						<li><a href="#">f1</a></li>
-					</ul>
-				</div>
-				<div class="col-sm-4">
-					<address>my address</address>
+					<div class="text-center">
+                        <a class="btn btn-social-icon btn-google" href="http://google.com"><i class="fa fa-google-plus"></i></a>
+                        <a class="btn btn-social-icon btn-facebook" href="http://facebook.com"><i class="fa fa-facebook"></i></a>
+                        <a class="btn btn-social-icon btn-linkedin" href="http://linkedin.com"><i class="fa fa-linkedin"></i></a>
+                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com"><i class="fa fa-twitter"></i></a>
+                        <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+                    </div>
 				</div>
 			</div>
 			<div class="row justify-content-center">
