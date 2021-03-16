@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+    <link rel="stylesheet" type="text/css" href="css/mystyles.css">
+
+</head>
+
+<body>
+	<nav class="navbar navbar-dark navbar-expand-sm bg-primary fixed-top">
+        <div class="container">
+        	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">MyPractise</a>
+            <div class="collapse navbar-collapse" id="Navbar">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="webcomp1.html">Web Components 1</a></li>
+                    <li class="nav-item"><a class="nav-link" href="webcomp2.html">Web Components 2</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="webcomp3.html">Web Components 3</a></li>
+                </ul>     
+            </div>     
+        </div>
+    </nav>
+
+    <br>
+    <h3>3.1 Carousel</h3>
+    <br>
+
+    <div class="row row-content">
+        <div class="col">
+            <div id="mycarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <img class="d-block img-fluid"
+                            src="img/canada.JPG" alt="canada">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h2>Canada</h2>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block img-fluid"
+                            src="img/flower.JPG" alt="flower">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h2>Flower</h2>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block img-fluid"
+                            src="img/station.JPG" alt="station">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h2>Station</h2>
+                        </div>
+                    </div>
+                </div>
+                <ol class="carousel-indicators">
+                    <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#mycarousel" data-slide-to="1"></li>
+                    <li data-target="#mycarousel" data-slide-to="2"></li>
+                </ol>
+                <a class="carousel-control-prev" href="#mycarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <h3>3.2 JQuery two buttons to pause and play carousel</h3>
+    <br>
+
+    <div class="btn-group" id="carouselButton">
+        <button class="btn btn-danger btn-sm" id="carousel-pause">
+            <span class="fa fa-pause"></span>
+        </button>
+        <button class="btn btn-danger btn-sm" id="carousel-play">
+            <span class="fa fa-play"></span>
+        </button>
+    </div>
+
+    <br>
+    <h3>3.3 JQuery one button to pause and play carousel</h3>
+    <br>
+
+    <button class="btn btn-danger btn-sm" id="oneButton">
+        <span id="carousel-button-icon" class="fa fa-pause"></span>
+    </button>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#mycarousel").carousel( { interval: 2000 } );
+            $("#carousel-pause").click(function(){
+                $("#mycarousel").carousel('pause');
+            });
+            $("#carousel-play").click(function(){
+                $("#mycarousel").carousel('cycle');
+            });
+        });
+
+        $("#oneButton").click(function(){
+            if ($("#oneButton").children("span").hasClass('fa-pause')) {
+                $("#mycarousel").carousel('pause');
+                $("#oneButton").children("span").removeClass('fa-pause');
+                $("#oneButton").children("span").addClass('fa-play');
+            }
+            else if ($("#oneButton").children("span").hasClass('fa-play')){
+                $("#mycarousel").carousel('cycle');
+                $("#oneButton").children("span").removeClass('fa-play');
+                $("#oneButton").children("span").addClass('fa-pause');                    
+            }
+        });
+    </script>
+
+</body>

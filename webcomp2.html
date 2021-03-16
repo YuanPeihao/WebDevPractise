@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
     <link rel="stylesheet" type="text/css" href="css/mystyles.css">
+
 </head>
 
 <body>
@@ -26,11 +27,47 @@
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="webcomp1.html">Web Components 1</a></li>
                     <li class="nav-item active"><a class="nav-link" href="webcomp2.html">Web Components 2</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Web Components 3</a></li>
+                    <li class="nav-item"><a class="nav-link" href="webcomp3.html">Web Components 3</a></li>
                 </ul>     
             </div>     
         </div>
     </nav>
+
+    <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Login </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-sm-4">
+                                <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                                <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="Enter email">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label class="sr-only" for="exampleInputPassword3">Password</label>
+                                <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Password">
+                            </div>
+                            <div class="col-sm-auto">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label"> Remember me</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>        
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <br>
     <br>
@@ -40,6 +77,129 @@
     <h3>2.1 Badge</h3>
     <span class="badge badge-danger">CRITICAL</span>
     <span class="badge badge-pill badge-secondary">$9.99</span>
+
+    <br>
+    <br>
+    <h3>2.2 Nav Tabs</h3>
+    <br>
+
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" href="#paul"
+            role="tab" data-toggle="tab">Paul Goodman, CEO</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#danny" role="tab"
+            data-toggle="tab">Danny Lee, CFO</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#david"role="tab"
+            data-toggle="tab">David West, CTO</a>
+        </li>
+    </ul>
+
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane fade show active" id="paul">
+            <h3>Paul Goodman <small>CEO</small></h3>
+            <p> ... content ... </p>
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="danny">
+            <h3>Danny Lee <small>CFO</small></h3>
+            <p> ... content ... </p>
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="david">
+            <h3>David West <small>CTO</small></h3>
+            <p> ... content ... </p>
+        </div>                  
+    </div>
+
+    <br>
+    <h3>2.3 Accordion</h3>
+    <br>
+
+    <div id="accordion">
+        <div class="card">
+            <div class="card-header" role="tab" id="paulhead">
+                <h3 class="mb-0">
+                    <a data-toggle="collapse" data-target="#paulg">
+                    Paul Goodman <small>Chief Epicurious Officer</small>
+                    </a>
+                </h3>
+            </div>
+            <div class="collapse show" id="paulg" data-parent="#accordion">
+                <div class="card-body">
+                    <p class="d-none d-sm-block">. . .</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" role="tab" id="dannyhead">
+                <h3 class="mb-0">
+                    <a class="collapsed" data-toggle="collapse" data-target="#dannyl">
+                    Danny Lee <small>Chief Food Officer</small>
+                    </a>
+                </h3>
+            </div>
+            <div class="collapse" id="dannyl" data-parent="#accordion">
+                <div class="card-body">
+                    <p class="d-none d-sm-block">. . .</em></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" role="tab" id="davidhead">
+                <h3 class="mb-0">
+                    <a class="collapsed" data-toggle="collapse" data-target="#davidw">
+                    David West <small>Chief Taste Officer</small>
+                    </a>
+                </h3>
+            </div>
+            <div class="collapse" id="davidw" data-parent="#accordion">
+                <div class="card-body">
+                    <p class="d-none d-sm-block">. . .</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <h3>2.4 Tooltips</h3>
+    <br>
+
+    <div class="row row-content">
+        <div class="col-6 col-sm-3">
+            <a role="button" class="btn btn-block nav-link btn-warning"
+            data-toggle="tooltip" data-html="true"  title="this is a tip message"
+            data-placement="bottom" href="#reserveform">Tip Button</a>
+        </div>
+    </div>
+
+    <br>
+    <h3>2.5 Modals</h3>
+    <br>
+
+    <div class="row row-content">
+        <div class="col-6 col-sm-3">
+            <span class="navbar-text">
+                <a data-toggle="modal" data-target="#loginModal">
+                <button class="fa fa-sign-in"> Login</button> 
+            </span>
+        </div>
+    </div>
+
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- self made scripts -->
+    <script>
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
 
 
 </body>
